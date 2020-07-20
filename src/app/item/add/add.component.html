@@ -1,0 +1,29 @@
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h3>Add Item</h3>
+        </div>
+        <div class="card-body">
+            <form action="">
+                <div class="form-group">
+                    <label for="" style="min-width: 25%;">No:</label>
+                    <input [(ngModel)]="item.no" name="no" type="text" class="form/control"  style="min-width: 70%;" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="" style="min-width: 25%;">Name:</label>
+                    <input [(ngModel)]="item.name" name="name" type="text" class="form/control"  style="min-width: 70%;">
+                </div>
+                <div class="form-group">
+                    <label for="" style="min-width: 25%;">Amount:</label>
+                    <input [(ngModel)]="item.amount" name="amount" type="text" class="form/control"  style="min-width: 70%;">
+                </div>
+                <div class="form-group">
+                    <label for="" style="min-width: 25%;">Inventory Code:</label>
+                    <input [(ngModel)]="item.inventoryCode" name="inventoryCode" type="text" class="form/control"  style="min-width: 70%;">
+                </div>
+                <button (click)="save(item)" class="btn btn-danger">Save</button>
+            </form>
+        </div>
+    </div>
+
+</div>

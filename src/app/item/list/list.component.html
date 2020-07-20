@@ -1,0 +1,43 @@
+<div class="container" style="min-width: 100%;">
+    <div class="card">
+        <div class="card-header">
+            <h3>Items</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+
+                        <th>No</th>
+                        <th>Name</th>
+                        <th>Amount</th>
+                        <th>Amount Action</th>
+                        <th>Code</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of items" class="text-center">
+                        <td>{{item.no}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.amount}}</td>
+                        <td>
+                            <div class="form-group">
+                                <button (click)="withdraw(item)" class="btn btn-warning"> - </button>
+                                <input [(ngModel)]="item.amountModifier" name="amountModifier" type="text" class="form/control"
+                                    style="min-width: 10px;">
+                                <button (click)="deposite(item)" class="btn btn-info"> + </button>
+                            </div>
+                        </td>
+                        <td>{{item.inventoryCode}}
+                        </td>
+                        <td>
+                            <button (click)="edit(item)" class="btn btn-warning">Edit</button>
+                            <button (click)="delete(item)" class="btn btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

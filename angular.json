@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "InventoryX"
+    }
+  },
+  "defaultProject": "InventoryX",
+  "cli": {
+    "analytics": false
+  }
 }
